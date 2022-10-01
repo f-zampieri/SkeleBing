@@ -1,0 +1,98 @@
+[
+  {
+    "skeleton": {
+      "$type": "Skeleton"
+    },
+    "sideEffects": {
+      "$type": "SideEffects",
+      "velocity": {
+        "x": "-2.4",
+        "y": "0"
+      }
+    }
+  },
+  {
+    "skeleton": {
+      "$type": "Skeleton"
+    },
+    "sideEffects": {
+      "$type": "SideEffects",
+      "velocity": {
+        "x": "-2.4",
+        "y": "0"
+      }
+    }
+  },
+  {
+    "skeleton": {
+      "$type": "Skeleton"
+    },
+    "sideEffects": {
+      "$type": "SideEffects",
+      "velocity": {
+        "x": "-2.4",
+        "y": "0"
+      }
+    }
+  },
+  {
+    "skeleton": {
+      "$type": "Skeleton"
+    },
+    "sideEffects": {
+      "$type": "SideEffects",
+      "velocity": {
+        "x": "-2.4",
+        "y": "0"
+      }
+    }
+  },
+  {
+    "skeleton": {
+      "$type": "Skeleton"
+    },
+    "sideEffects": {
+      "$type": "SideEffects",
+      "velocity": {
+        "x": "-2.4",
+        "y": "0"
+      }
+    }
+  },
+  {
+    "skeleton": {
+      "$type": "Skeleton"
+    },
+    "sideEffects": {
+      "$type": "SideEffects",
+      "velocity": {
+        "x": "-2.4",
+        "y": "0"
+      }
+    }
+  },
+  {
+    "skeleton": {
+      "$type": "Skeleton"
+    },
+    "sideEffects": {
+      "$type": "SideEffects",
+      "velocity": {
+        "x": "-2.4",
+        "y": "0"
+      }
+    }
+  },
+  {
+    "skeleton": {
+      "$type": "Skeleton"
+    },
+    "sideEffects": {
+      "$type": "SideEffects",
+      "velocity": {
+        "x": "-2.4",
+        "y": "0"
+      }
+    }
+  }
+]

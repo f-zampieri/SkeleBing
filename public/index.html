@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>SkeleBing</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="skelebing.js"></script>
+</head>
+
+<body onload="init()">
+	<div class="b-main-panel">
+		<h3>Welcome to SkeleBing</h3>
+		<input id="image-upload" type="file" accept="image/*"/>
+		<span id="current-frame">Current frame: 1</span>
+		<span>
+			<button id="previous-frame-go" type="button" onclick="goToPreviousFrame()">← Go to previous frame</button>
+			<button id="next-frame-go" type="button" onclick="goToNextFrame()">Go to next frame →</button>
+		</span>
+		<span>
+			<button id="next-frame-add" type="button" onclick="addNewFrame()">Add next frame</button>
+		</span>
+		<div class="b-main-panel-body">
+			<div class="b-tools">
+				<h4>Tools</h4>
+				<form class="tools" id="tool-form">
+					<span>
+						<input type="radio" id="joint-tool" name="tool" value="joint">
+						<label for="joint-tool">Hurtbox joint</label>
+					</span>
+					<span>
+						<input type="radio" id="hitbox-tool" name="tool" value="hitbox">
+						<label for="hitbox-tool">Hitbox</label>
+					</span>
+					<span>
+						<input type="radio" id="velocity-tool" name="tool" value="velocity">
+						<label for="velocity-tool">Velocity side effect</label>
+					</span>
+				</form>
+				<h4>Frame data</h4>
+				<div>
+					<ul id="frame-data-list" class="frame-data-list"></ul>
+				</div>
+			</div>
+			<div class="b-screen">
+				<canvas id="canvas" class="canvas">stonks</canvas>
+				<div class="b-skeleton">
+					<span class="b-context-left">
+						<h4>Hurtbox joints</h4>
+						<ol id="joints-list" class="joints-list"></ol>
+						<h4>Hitboxes</h4>
+						<ol id="hitboxes-list" class="hitboxes-list"></ol>
+					</span>
+					<span class="b-context-middle">
+						<h4>Hurtbox bones</h4>
+						<p class="bones-text">Make a bone by linking two joints.</p>
+						<div>
+							<label for="joint1-select">First joint:</label>
+							<select id="joint1-select" required>
+								<option value="---">---</option>
+							</select>
+						</div>
+						<div>
+							<label for="joint2-select">Second joint:</label>
+							<select id="joint2-select" required>
+								<option value="---">---</option>
+							</select>
+						</div>
+						<div>
+							<button id="bone-create" onclick="createBone()">Create bone</button>
+						</div>
+						<div>
+							<input type="checkbox" id="bone-toggle" onclick="renderBasedOnToggleBones()" checked="false">
+							<label for="bone-toggle">Show bones?</label>
+						</div>
+						<h4>Side effects</h4>
+						<form class="side-effects" id="side-effect-form">
+							<span>
+								<label for="velocity-side-effect-x-value">X velocity: </label>
+								<input type="text" id="velocity-side-effect-x-value" name="side-effect-x">
+							</span>
+							<span>
+								<label for="velocity-side-effect-y-value">Y velocity: </label>
+								<input type="text" id="velocity-side-effect-y-value" name="side-effect-y">
+							</span>
+						</form>
+						<h4>Hitbox parameters</h4>
+						<form class="hitbox-parameters" id="hitbox-parameters-form">
+							<span>
+								<label for="hitbox-parameter-radius">Radius:</label>
+								<input type="text" id="hitbox-parameter-radius" name="hitbox-parameter-radius">
+							</span>
+							<span>
+								<label for="hitbox-parameter-angle">Angle:</label>
+								<input type="text" id="hitbox-parameter-angle" name="hitbox-parameter-angle">
+							</span>
+						</form>
+					</span>
+					<span class="b-context-right">
+						<h4>Orthopedics</h4>
+						<p class="orthopedics-text">Adjust the position of a joint or hitbox.</p>
+						<div>
+							<label for="joint-adjust-select">Joint to adjust:</label>
+							<select id="joint-adjust-select">
+								<option value="---">---</option>
+							</select>
+						</div>
+						<div>
+							<button	class="joint-adjust-button" type="button" onclick="moveJointLeft()">←</button>
+							<button	class="joint-adjust-button" type="button" onclick="moveJointDown()">↓</button>
+							<button	class="joint-adjust-button" type="button" onclick="moveJointUp()">↑</button>
+							<button	class="joint-adjust-button" type="button" onclick="moveJointRight()">→</button>
+						</div>
+						<div>
+							<label for="hitbox-adjust-select">Hitbox to adjust:</label>
+							<select id="hitbox-adjust-select">
+								<option value="---">---</option>
+							</select>
+						</div>
+						<div>
+							<button	class="hitbox-adjust-button" type="button" onclick="moveHitboxLeft()">←</button>
+							<button	class="hitbox-adjust-button" type="button" onclick="moveHitboxDown()">↓</button>
+							<button	class="hitbox-adjust-button" type="button" onclick="moveHitboxUp()">↑</button>
+							<button	class="hitbox-adjust-button" type="button" onclick="moveHitboxRight()">→</button>
+						</div>
+						<div>
+							<h4>Download Frame Data</h4>
+							<button type="button" id="frames-download" onclick="downloadFrameData()">As JSON</button>
+						</div>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

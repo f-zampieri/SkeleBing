@@ -1,0 +1,91 @@
+﻿[
+  {
+    "sprite": "falco.png",
+    "joints": {
+      "1": {
+        "$type": "Joint",
+        "position": {
+          "x": 72,
+          "y": 30
+        },
+        "connectsTo": [
+          2
+        ]
+      },
+      "2": {
+        "$type": "Joint",
+        "position": {
+          "x": 66,
+          "y": 38
+        },
+        "connectsTo": [
+          1
+        ]
+      },
+      "3": {
+        "$type": "Joint",
+        "position": {
+          "x": 56,
+          "y": 65
+        },
+        "connectsTo": [
+          4,
+          8
+        ]
+      },
+      "4": {
+        "$type": "Joint",
+        "position": {
+          "x": 56,
+          "y": 93
+        },
+        "connectsTo": [
+          3,
+          5
+        ]
+      },
+      "5": {
+        "$type": "Joint",
+        "position": {
+          "x": 68,
+          "y": 107
+        },
+        "connectsTo": [
+          4,
+          6
+        ]
+      },
+      "6": {
+        "$type": "Joint",
+        "position": {
+          "x": 58,
+          "y": 129
+        },
+        "connectsTo": [
+          5,
+          7
+        ]
+      },
+      "7": {
+        "$type": "Joint",
+        "position": {
+          "x": 84,
+          "y": 147
+        },
+        "connectsTo": [
+          6
+        ]
+      },
+      "8": {
+        "$type": "Joint",
+        "position": {
+          "x": 80,
+          "y": 80
+        },
+        "connectsTo": [
+          3
+        ]
+      }
+    }
+  }
+]

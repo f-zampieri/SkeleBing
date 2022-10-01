@@ -1,0 +1,110 @@
+﻿.b-main-panel {
+	margin-left: auto;
+	margin-right: auto;
+	max-width:	900px;
+	display: flex;
+	flex-direction: column;
+}
+
+.b-main-panel div {
+	max-width: inherit;
+}
+
+.b-main-panel-body {
+	display: flex;
+	max-width: inherit;
+}
+
+.b-tools {
+	/*min-width: 7.5%;*/
+	padding-right: 10px;
+}
+
+.tools {
+	display: flex;
+	flex-direction: column;
+}
+
+.frame-data-list {
+	list-style-type: none;
+	padding-left: 0px;
+	margin-right: 10px;
+}
+
+.frame-data {
+	padding: 6px 12px;
+	border: 1px solid black;
+	margin-bottom: 5px;
+}
+
+.canvas {
+	max-width: inherit;
+	border: 1px solid black;
+}
+
+/* three-panel block */
+.b-skeleton {
+	display: flex;
+}
+
+.b-context-left {
+	flex-grow: 1;
+	flex-wrap: wrap;
+	min-width: 200px;
+}
+
+.b-context-left h4 {
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+.b-context-left .joints-list {
+	margin-top: 5px;
+}
+
+.b-context-left .hitboxes-list {
+	margin-top: 5px;
+}
+
+.b-context-middle {
+	flex-grow: 1;
+	max-width: 250px;
+}
+
+.b-context-middle h4 {
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+.b-context-middle .bones-text {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.b-context-middle .side-effects {
+	display: flex;
+	flex-direction: column;
+}
+
+.b-context-middle .hitbox-parameters {
+	display: flex;
+	flex-direction: column;
+}
+
+.b-context-right h4 {
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+.b-context-right .orthopedics-text {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.joint-adjust-button {
+	font-size: 20px;
+}
+
+.hitbox-adjust-button {
+	font-size: 20px;
+}
